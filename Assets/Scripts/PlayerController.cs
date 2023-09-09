@@ -3,25 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public int Respawn;
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+
+    public TextMeshProUGUI timerText;
 
     private Rigidbody rb;
     private int count;
     private float movementX;
     private float movementY;
+    private int timer;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
+        timer = 3600;
 
         SetCountText();
+        SetTimerText();
         winTextObject.SetActive(false);
     }
 
@@ -42,11 +50,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void SetTimerText()
+    {
+        timerText.text = "Timer: " + timer.ToString();
+        timer--;
+        if(timer < 0)
+        {
+            SceneManager.LoadScene(Respawn);
+        }
+    }
+
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
 
         rb.AddForce(movement * speed);
+        SetTimerText();
     }
 
     private void OnTriggerEnter(Collider other)
