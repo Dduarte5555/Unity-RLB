@@ -46,7 +46,8 @@ public class PlayerController : MonoBehaviour
         countText.text = "Count: " + count.ToString();
         if(count >= 12)
         {
-            winTextObject.SetActive(true);
+            // winTextObject.SetActive(true);
+            SceneManager.LoadScene(3);
         }
     }
 
@@ -54,9 +55,15 @@ public class PlayerController : MonoBehaviour
     {
         timerText.text = "Timer: " + timer.ToString();
         timer--;
+
+        if(count >= 12)
+        {
+            timer++;
+        }
+
         if(timer < 0)
         {
-            SceneManager.LoadScene(Respawn);
+            SceneManager.LoadScene(2);
         }
     }
 

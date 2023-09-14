@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 5b95d70de8a2b274984a043814e05006
+  - enabled: 1
+    path: Assets/Scenes/Minigame.unity
+    guid: b9f02ba2410fee24c83e4fd898f013e5
+  - enabled: 1
+    path: Assets/Scenes/Morte.unity
+    guid: b1de68298cafa03428f1b09354752fe4
+  - enabled: 1
+    path: Assets/Scenes/Vencer.unity
+    guid: 79d112c63a21743478ad69367fcda450
   m_configObjects: {}

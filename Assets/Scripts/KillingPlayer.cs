@@ -12,7 +12,8 @@ public class KillingPlayer : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             // other.gameObject.SetActive(false);
-            SceneManager.LoadScene(Respawn);
+            SceneManager.LoadScene(2);
+            // SceneManager.LoadScene(Respawn);
         }
     }
 }
