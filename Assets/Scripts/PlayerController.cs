@@ -20,13 +20,16 @@ public class PlayerController : MonoBehaviour
     private float movementX;
     private float movementY;
     private int timer;
+    private int contador_timer;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         count = 0;
-        timer = 3600;
+        timer = 60;
+        contador_timer = 0;
+
 
         SetCountText();
         SetTimerText();
@@ -54,11 +57,10 @@ public class PlayerController : MonoBehaviour
     void SetTimerText()
     {
         timerText.text = "Timer: " + timer.ToString();
-        timer--;
-
-        if(count >= 12)
-        {
-            timer++;
+        contador_timer++;
+        if(contador_timer == 60){
+            timer--;
+            contador_timer = 0;
         }
 
         if(timer < 0)
