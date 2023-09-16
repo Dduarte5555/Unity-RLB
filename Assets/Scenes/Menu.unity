@@ -632,10 +632,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Colete todas as 12 moedas espalhadas dentro do tempo.
+  m_text: 'Colete todas as 12 moedas espalhadas pelo mapa.
 
-    Tome cuidado
-    com as paredes vermelhas'
+    Tome cuidado com
+    o fogo e com o tempo.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

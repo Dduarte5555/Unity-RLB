@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
             contador_timer = 0;
         }
 
-        if(timer < 0)
+        if(timer <= 0)
         {
             SceneManager.LoadScene(2);
         }
